@@ -1,0 +1,11 @@
+<div *ngIf="libro"class="detalle-container">
+    <h2>Detalle del Libro</h2>
+    <p><strong>Título:</strong> {{ libro.titulo }}</p>
+    <p><strong>Autor:</strong> {{ libro.autor }}</p>
+    <p><strong>Descripción:</strong> {{ libro.descripcion }}</p>
+    <button [routerLink]="['/editar-libro', libro.id]">Editar</button>
+</div>
+
+<div *ngIf="!libro">
+    <p>Libro no encontrado</p>
+</div>

@@ -1,0 +1,19 @@
+# Node
+node_modules/
+
+# Angular
+.angular/
+dist/
+out-tsc/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-error.log*

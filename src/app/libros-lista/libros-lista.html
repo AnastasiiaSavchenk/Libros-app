@@ -1,0 +1,17 @@
+<div class="lista-container">
+  <h2>Lista de Libros</h2>
+
+  <input type="text" placeholder="Buscar libro" [(ngModel)]="filtro" />
+
+  <ul>
+    <ng-container *ngFor="let libro of libros">
+      <li *ngIf="libro.titulo.toLowerCase().includes(filtro.toLowerCase()) || libro.autor.toLowerCase().includes(filtro.toLowerCase())">
+        <div>{{ libro.titulo }} - {{ libro.autor }}</div>
+        <div>
+          <a [routerLink]="['/libro-detalle', libro.id]">Ver</a>
+          <button *ngIf="libro.id" (click)="eliminar(libro.id)">Eliminar</button>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>
